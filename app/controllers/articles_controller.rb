@@ -1,4 +1,5 @@
 class ArticlesController < ApplicationController
+  # set_upメソッドで事前に@articleにパラメーターを代入
   before_action :set_up, only: [:show, :edit, :update, :destroy]
   def index
     @articles = Article.all
