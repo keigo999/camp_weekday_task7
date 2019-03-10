@@ -14,11 +14,17 @@ class ArticlesController < ApplicationController
   def edit
   end
 
-  def update
+  def create
     @article = Article.find(article_params)
     @article.save
     redirect_to @article
   end
+
+  def destroy
+    @article.destroy
+    redirect_to articles_path
+  end
+
 
   private
 
