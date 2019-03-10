@@ -1,5 +1,7 @@
 class ArticlesController < ApplicationController
+  
   def index
+    @articles = Article.all
   end
 
   def show
@@ -9,5 +11,11 @@ class ArticlesController < ApplicationController
   end
 
   def edit
+  end
+
+  private
+
+  def article_params
+    params.require(:article).permit(:title, :body)
   end
 end
