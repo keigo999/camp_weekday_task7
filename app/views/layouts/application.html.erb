@@ -7,9 +7,21 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <style>
+    .black{background: #343A40;}
+    </style>
+
   </head>
 
   <body>
-    <%= yield %>
+  <%= render "layouts/header" %>
+  <div class="row">
+    <div class = "col-md-8">
+      <%= yield %>
+    </div>
+    <div class = "col-md-1 black">
+    </div>
+    <div class = "col-md-3">
+    </div>
   </body>
 </html>
