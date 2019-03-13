@@ -1,0 +1,14 @@
+<h1>論文編集</h1>
+<%= form_with model: @article, local: true do |f| %>
+  <div>
+    <p><%= f.label "論文タイトル" %></p>
+    <p><%= f.text_field :title %></p>
+  </div>
+
+  <div>
+    <p><%= f.label "本文" %></p>
+    <p><%= f.text_area :body %></p>
+  </div>
+
+  <%= f.submit "編集" %>
+<% end %>
